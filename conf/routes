@@ -1,4 +1,4 @@
 
 GET             /assets/*file                 controllers.Assets.at(path="/public", file)
 
-#-> /sub1        sub1.Routes
+-> /sub1        sub1.Routes

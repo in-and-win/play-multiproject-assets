@@ -9,7 +9,7 @@ lazy val commonSettings = Seq(
 
 lazy val root = (project in file("."))
 	.settings(commonSettings:_*)
-	.enablePlugins(PlayScala)
+	.enablePlugins(PlayScala, SbtWeb)
 	.settings(routesGenerator := InjectedRoutesGenerator)
   	.dependsOn(sub1)
   	.aggregate(sub1)
@@ -17,7 +17,7 @@ lazy val root = (project in file("."))
 
 lazy val sub1 = (project in file("modules/sub1"))
 	.settings(commonSettings:_*)
-	.enablePlugins(PlayScala)
+	.enablePlugins(PlayScala, SbtWeb)
 	.settings(routesGenerator := InjectedRoutesGenerator)
 
 

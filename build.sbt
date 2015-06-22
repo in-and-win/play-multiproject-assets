@@ -1,11 +1,12 @@
 
-import com.typesafe.sbt.web.SbtWeb.autoImport._
 
 lazy val commonSettings = Seq(
   organization := "foo",
   version := "0.1.0",
   scalaVersion := "2.11.6"
 )
+
+WebKeys.packagePrefix in Assets := "public/"
 
 lazy val root = (project in file("."))
 	.settings(commonSettings:_*)

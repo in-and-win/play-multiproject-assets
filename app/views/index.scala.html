@@ -1,0 +1,25 @@
+@()(implicit request: RequestHeader)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Demo assets</title>
+    </head>
+    <body>
+        <div class="content">
+
+			<p>
+				<div>From the <em>root</em> module: </div>
+				<img src="@controllers.routes.Assets.at("images/iaw1.png")" />
+			</p>
+            
+
+            <p>
+            	<div>From the <em>sub1</em> module: </div>
+            	<img src="@controllers.sub1.routes.Assets.at("images/iaw2.png")" />
+            </p>
+
+        </div>
+    </body>
+</html>
